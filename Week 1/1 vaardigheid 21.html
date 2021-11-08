@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script language="javascript">
+      //lengte vader in cm
+      var paLenght = 192;
+
+      //lengte moeder in cm
+      var maLenght = 153;
+
+      //geslacht
+      var male = false;
+      
+      if (male) {
+        var kindVerwachting = (3 * paLenght + maLenght) / 4;
+      } else {
+        var kindVerwachting = (paLenght + 3 * maLenght) / 4;
+      }
+
+      console.log(kindVerwachting);
+    </script>
+  </head>
+</html>
