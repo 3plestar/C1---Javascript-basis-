@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script language="javascript">
+      const sentence = (name, salary) => {
+        let wordOne;
+        switch (name) {
+          case "Jorn":
+            wordOne = "great";
+          default:
+            wordOne = "okish";
+        }
+        console.log(
+          `The name is ${name} and i am ${wordOne} 
+          and my salary is ${salary * 2} and it just got doubled!`
+        );
+      };
+
+      sentence("Frits", 3000);
+    </script>
+  </head>
+</html>
