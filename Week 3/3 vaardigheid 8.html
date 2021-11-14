@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script language="javascript">
+      const objectSelf = {
+        name: "David",
+        birthYear: 2002,
+        job: "nothing",
+        residence: "Almere",
+        getAge: function () {
+          if (!this.age) this.age = new Date().getFullYear() - this.birthYear;
+          return this.age;
+        },
+      };
+      const objectTeachers = {
+        name: "le fish",
+        birthYear: 1930,
+        job: "Teacher",
+        residence: "Almere",
+        getAge: function () {
+          if (!this.age) this.age = new Date().getFullYear() - this.birthYear;
+          return this.age;
+        },
+      };
+
+      console.log(`leeftijd ${objectSelf.name}: ${objectSelf.getAge()}`);
+      console.log(`leeftijd ${objectTeachers.name}: ${objectTeachers.getAge()}`);
+
+      //check voor oudste
+      if (objectSelf.getAge() > objectTeachers.getAge()) {
+        console.log(objectSelf.name);
+      } else if (objectSelf.getAge() < objectTeachers.getAge()) {
+        console.log(objectTeachers.name);
+      }
+
+      //check of je in almere woont
+      if(objectSelf.residence=="Almere"){
+          console.log(objectSelf.name);
+      }
+      if(objectTeachers.residence=="Almere"){
+          console.log(objectTeachers.name);
+      }
+    </script>
+  </head>
+</html>

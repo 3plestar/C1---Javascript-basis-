@@ -2,15 +2,17 @@
 <html>
   <head>
     <script language="javascript">
-      const objectOne = {
-          firstName: "Piet",
-          lastName: "Janssens",
-          job: "Fighter",
-          getJobAndName: function(){
-              return `my name is ${this.firstName} ${this.lastName} and I am a ${this.job}`;
+      const object = {
+          een: "een",
+          twee: "twee",
+          drie: "drie",
+          getAll: function(){
+              return `${this.een} ${this.twee} ${this.drie}`;
           }   
       }
-      console.log(objectOne.getJobAndName());
+      console.log(object.getAll());
+      object.vier="vier";
+      console.log(object.vier)
     </script>
   </head>
 </html>

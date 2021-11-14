@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script language="javascript">
+      const arrayOne =[];
+      for(i=1;i<=15;i++){
+        arrayOne.push(i);
+      }
+      for(i=0;i<15;i++){
+        console.log(arrayOne[i]);
+      }
+
+      //optellen
+      let arrayOnePlus=0;
+      for(i=0;i<15;i++){
+        arrayOnePlus+= arrayOne[i];
+      }
+      console.log(`alles opgeteld: ${arrayOnePlus}`);
+
+      //keer 2 wanneer minder dan 100
+      if(arrayOnePlus<=100){
+        console.log(`alles opgeteld keer 2: ${2*arrayOnePlus}`);
+      }
+    </script>
+  </head>
+</html>
