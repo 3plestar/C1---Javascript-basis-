@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script language="javascript">
+      birthDay = new Date("03/11/2002");
+      currentDay = new Date();
+
+      var timeDifference = currentDay.getTime() - birthDay.getTime();
+      var dayDifference = timeDifference / (1000 * 3600 * 24);
+
+      var yearDifference= Math.floor(dayDifference/365.2422)
+      var restDays=Math.floor(dayDifference-yearDifference*365.2422)
+      console.log(`ik ben ${yearDifference} jaar en ${restDays} dagen oud`);
+    </script>
+  </head>
+</html>

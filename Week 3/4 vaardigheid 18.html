@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script language="javascript">
+      const arrayOne = [];
+      for (i = 0; i <= 10; i++) {
+        arrayOne[i] = i + 5;
+        console.log(arrayOne[i]);
+      }
+
+      //a
+      console.log("---");
+      const arrayTwo = [];
+      for (i = 0; i <= 10; i++) {
+        arrayTwo[i] = (i + 5) * 2;
+        console.log(arrayTwo[i]);
+      }
+
+      //b
+      console.log("---");
+      for (let i = 0; i <= arrayOne.length; i++) {
+        if (arrayOne[i] % 2 === 0) {
+          console.log(arrayOne[i]);
+        }
+      }
+
+      //c
+      console.log("---");
+      for (let i = 0; i < arrayOne.length; i++) {
+        if (arrayOne[i] % 2 !== 0) {
+          console.log(arrayOne[i]);
+        }
+      }
+
+      //d
+      console.log("---");
+      const arrayThree=[];
+      for (let i = 0; i < arrayOne.length; i++) {
+          arrayThree[i] =arrayOne[i]+arrayTwo[i];
+          console.log(arrayThree[i]);
+      }
+
+      //e
+      console.log("---");
+      console.log(arrayThree.length);
+    </script>
+  </head>
+</html>
