@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    .container {
+      display: flex;
+      justify-content: space-around;
+    }
+    .click {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      cursor: pointer;
+    }
+    .number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+      background-color: lightskyblue;
+      cursor: pointer;
+    }
+  </style>
+  <div class="container">
+    <div>
+      <div class="click">click</div>
+      <img class="number">
+    </div>
+    <div>
+      <div class="click">click</div>
+      <img class="number">
+    </div>
+  </div>
+  <script language="javascript">
+    
+    document.addEventListener("click", function (event) {
+     let random=Math.round(Math.random()*9)+1;
+      var clickElements = document.getElementsByClassName("click");
+      for (i = 0; i < clickElements.length; i++) {
+        if (event.target == document.getElementsByClassName("click")[i]) {
+          document.getElementsByClassName("number")[i].src = "img/"+random+".jpg";
+        }
+      }
+    });
+  </script>
+</html>

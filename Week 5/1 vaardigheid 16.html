@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    .container {
+      display: flex;
+      justify-content: space-around;
+    }
+    .click {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      cursor: pointer;
+    }
+    .number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+      background-color: lightskyblue;
+      cursor: pointer;
+    }
+  </style>
+  <div class="container">
+    <div>
+      <div class="click">click</div>
+      <div class="number">0</div>
+    </div>
+  </div>
+  <script language="javascript">
+    let a = 0;
+    b = 1;
+    document.addEventListener("click", function (event) {
+      a += b ** 2;
+      b++;
+
+      if (event.target == document.getElementsByClassName("click")[0]) {
+        document.getElementsByClassName("number")[0].innerHTML = a;
+      }
+    });
+  </script>
+</html>

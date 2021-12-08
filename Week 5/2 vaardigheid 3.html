@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    .container {
+      display: flex;
+      justify-content: space-around;
+    }
+    .grid-container_item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      cursor: pointer;
+    }
+   
+  </style>
+  <div class="container">
+    <div class="grid-container_item grid-container_item-a">A</div>
+    <div class="grid-container_item grid-container_item-b">B</div>
+    <div class="grid-container_item grid-container_item-c">C</div>
+  </div>
+  <script language="javascript"> 
+    document.addEventListener("click", function (event) {
+      var clickElements = document.getElementsByClassName("grid-container_item");
+      for (i = 0; i < clickElements.length; i++) {
+        if (event.target == document.getElementsByClassName("grid-container_item")[i]) {
+          console.log("Geklikt")
+        }
+      }
+    });
+  </script>
+</html>

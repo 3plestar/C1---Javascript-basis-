@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        
+        .grid-container_item{
+            border: solid black 2px;
+            text-align: center;
+            padding: 5px;
+        }
+    </style>
+  <div class="grid-container">
+    <div class="grid-container_item grid-container_item-1">A</div>
+    <div class="grid-container_item grid-container_item-2">B</div>
+    <div class="grid-container_item grid-container_item-3">C</div>
+    <div class="grid-container_item grid-container_item-4">D</div>
+    <div class="grid-container_item grid-container_item-5">E</div>
+    <div class="grid-container_item grid-container_item-6">F</div>
+    <div class="grid-container_item grid-container_item-7">G</div>
+  </div>
+  <script language="javascript">
+      document.addEventListener('click', function(event){
+        document.querySelector('.grid-container_item-5').onclick = function() {
+            document.querySelector('.grid-container_item-6').innerHTML = "Hello World!";
+        };
+      })
+   </script>
+</html>

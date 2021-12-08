@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        .grid-container_item{
+            padding-top: 5px;
+            padding-bottom: 5px;
+            text-align: center;
+            background-color: pink;
+            width: 50px;
+        }
+    </style>
+  <div class="grid-container">
+    <div class="grid-container_item">A</div>
+  </div>
+  <script language="javascript">
+      a=50;
+     document.querySelector('.grid-container_item').onclick = function() {
+         a*=2;
+         document.querySelector('.grid-container_item').style.width = a+'px';
+     }
+   </script>
+</html>
