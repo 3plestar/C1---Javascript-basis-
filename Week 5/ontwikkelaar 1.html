@@ -156,7 +156,7 @@
         document.getElementById("answer").value = "";
         loadMath();
         //when you win
-        if (score == 1) {
+        if (score == 11) {
           modal.style.display = "block";
           document.querySelector(".endScore").innerHTML = "-" +score + " vragen goed beantwoord";
           if (mistake == 0) {
@@ -190,12 +190,12 @@
       document.querySelector(".score").innerHTML = "SCORE " + score;
     };
 
-    //reset mistake
+    //reset mistakes
     document.getElementById("answer").onclick = function () {
       document.getElementById("answer").style.backgroundColor = "white";
     };
     
-    //open modal
+    
     let modal = document.querySelector("#myModal");
 
     //close modal en reset

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    *{
+  font-size: 60px;
+}
+
+.score{
+  background-color: aqua;
+  width: 800px;
+  height: 150px;
+  margin: auto;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container{
+  width: 800px;
+  height: 500px;
+  margin: auto;
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+#grid-item-1{
+  background-color: purple;
+  grid-row: span 3;
+  grid-column: span 3;
+}
+
+#grid-item-2{
+  background-color:plum ;
+}
+
+#grid-item-3{
+  background-color: lightgreen;
+  grid-row: span 3;
+}
+
+#grid-item-4{
+  background-color: lightcoral;
+  grid-row: span 2;
+}
+
+#grid-item-5{
+  background-color: darkcyan
+}
+
+#grid-item-6{
+  background-color: pink;
+  grid-column: span 3;
+}
+
+#grid-item-7{
+  background-color:burlywood ;
+  grid-row: span 2;
+
+}
+
+#grid-item-8{
+  background-color: greenyellow;
+  grid-column: span 4;
+}
+.grid-items{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons{
+ background-color: aqua;
+  width: 800px;
+  height: 150px;
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button{
+  font-size: 60px;
+  margin-left: 20px;
+}
+  </style>
+  <body>
+  
+    <div class="score"></div>
+  
+    <div class="container">
+      <div class="grid-items" id="grid-item-1"></div>
+      <div class="grid-items" id="grid-item-2"></div>
+      <div class="grid-items" id="grid-item-3"></div>
+      <div class="grid-items" id="grid-item-4"></div>
+      <div class="grid-items" id="grid-item-5"></div>
+      <div class="grid-items" id="grid-item-6"></div>
+      <div class="grid-items" id="grid-item-7"></div>
+      <div class="grid-items" id="grid-item-8"></div>
+    </div>
+  
+    <div class="buttons">
+      <button class="done-button">Done!</button>
+      <button class="cant-be-done button">Can't be done!</button>
+    </div>
+  </body>
+  <script language="javascript">
+    let score = 0;
+    let totaalPersoon = 0;
+
+    
+
+    randomNumbers = function () {
+      randomNum = Math.round(Math.random() * 49) + 1;
+      document.getElementsByClassName("score")[0].innerHTML = randomNum;
+
+      for (let i = 1; i <= 8; i++) {
+        randomNum = Math.round(Math.random() * 14) + 1;
+        gridItem = "grid-item-" + i;
+        document.getElementById(gridItem).innerHTML = randomNum; // kiest random nummer
+      }
+
+      document.addEventListener("click", function Nummers(event) {
+        if (event.target.className == "grid-items") {
+          if (event.target.innerHTML != "-") {
+            totaalPersoon += parseInt(event.target.innerHTML);
+            console.log(totaalPersoon);
+            event.target.innerHTML = "-"; 
+          }
+        } else if (event.target.className == "done-button") {
+          if (
+            totaalPersoon ==
+            parseInt(document.getElementsByClassName("score")[0].innerHTML)
+          ) {
+            score += 1;
+          }
+        }
+      });
+    };
+
+    document.getElementsByClassName("cant-be-done")[0].onclick = function () {
+      randomNumbers();
+      totaalPersoon = 0;
+    };
+    document.getElementsByClassName("done-button")[0].onclick = function () {
+      randomNumbers();
+      totaalPersoon = 0;
+    };
+
+    document.querySelector("body").onload = randomNumbers(); 
+  </script>
+</html>
