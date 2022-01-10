@@ -145,7 +145,7 @@ checkDiceForNumbers = function () {
     document.getElementsByClassName("fieldSmallStreet")[player].style.cursor = "pointer";
   }
 
-  //small street
+  //big street
   if (
     (numbersOnDice.includes(1) || numbersOnDice.includes(6)) &&
     numbersOnDice.includes(2) &&
@@ -301,6 +301,7 @@ endGame = function () {
   if (fieldsFilled[0] == 13 &&fieldsFilled[1] == 13 &&fieldsFilled[2] == 13 &&fieldsFilled[3] == 13) {
     modal.style.display = "block";
     document.querySelector(".rollButton").style.display = "none";
+    document.querySelector(".winners").innerHTML = "";
     if(endTotal[0]>=endTotal[1]&&endTotal[0]>=endTotal[2]&&endTotal[0]>=endTotal[3]){
       document.querySelector(".winners").innerHTML += "speler 1 <br>";
     } 
